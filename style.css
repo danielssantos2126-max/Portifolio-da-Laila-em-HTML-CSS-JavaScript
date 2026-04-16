@@ -1,0 +1,303 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #f5f5f5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(90deg, #1F6FEB, #FFC2D1);
+  color: white;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  
+  nav {
+  justify-self: center;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: bold;
+}
+}
+
+/* FOTO */
+.foto {
+  display: block;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ffdada;
+  margin: 0 auto;
+}
+
+/* SOBRE */
+.sobre-box {
+  display: grid;
+  align-items: center;
+  gap: 0px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  padding: 10px;
+  max-width: 900px;
+  width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.sobre-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobre div {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 5px;
+}
+
+.sobre h2 {
+  margin: 10px 0 5px;
+}
+
+.nome {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10xp;
+}
+
+.cargo {
+  margin: 10px 0;
+  color: #28282a;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+.descricao {
+  font-size: 17px;
+  text-align: center;
+}
+
+
+/* ANIMAÇÃO AO CARREGAR */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecer 0.8s ease forwards;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* DARK MODE */
+.dark {
+  background: #121212;
+  color: #eee;
+}
+
+.dark header {
+   background: #1f1f1f;
+}
+
+.dark .card {
+  background: #1e1e1e;
+  color: white;
+}
+
+.dark footer {
+  background: #000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}
+
+/* BOTÃO DARK MODE */
+.dark-btn {
+  justify-self: end;
+  width: auto;
+  max-width: 150px;   
+  justify-self: end;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 20px;
+  border: none;
+  width: auto;
+  white-space: nowrap;
+  background: #ffffff;
+  color: black;
+}
+
+.dark-btn:hover {
+  transform: scale(1.05);
+}
+.dark {
+  background: #121212;
+  color: #eee;
+}
+
+.dark .sobre-box {
+  background: #1e1e1e;
+}
+
+.dark .cargo {
+  color: #ffffff;
+}
+
+/* SEÇÕES */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* SOBRE */
+#sobre {
+  text-align: center;
+}
+
+/* PROJETOS */
+#lista-projetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(45deg, #1F6FEB, #FF4D6D);
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.card a:hover {
+  background: #630274;
+}
+
+/* CONTATO */
+#contato {
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.campo {
+  margin-bottom: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  background: linear-gradient(45deg, #1F6FEB, #FF4D6D);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer; 
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+  margin-top: 40px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+}
+
+.sobre-box {
+  animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  text-align: center;
+}
+
+/* MENSAGEM */
+#status-msg {
+    margin-top: 10px;
+    font-weight: bold;
+}
+

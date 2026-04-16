@@ -8,7 +8,7 @@ const projetos = [
   {
     nome: "Projeto 2 - Portifólio Profissional",
     descricao: "É um meu protifólio feito por HTML, CSS3 e JavaScript",
-    link: "#"
+    link: "https://github.com/danielssantos2126-max/Portifolio-da-Laila-em-HTML-CSS-JavaScript"
   }
 ];
 
